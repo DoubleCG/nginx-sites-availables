@@ -1,0 +1,14 @@
+server{
+
+	listen 111.230.180.101:8000;  
+        server_name gezispa;
+  
+        #charset utf8;  
+  
+        #access_log  logs/host.access.log  main;  
+  
+        location / {  
+            proxy_pass  http://127.0.0.1:8000;  
+            index  index.html index.htm;  
+        }
+    }  
